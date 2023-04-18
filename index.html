@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Maket</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header-logo">
+		<img src="img/logo—tp.svg" width="148" height="28" alt="logo"/>
+	</header>
+	<main class="search search_active search_active_more_history search_live">
+		<form class="search-form">
+		<div class="search-box">
+         <div class="search-group">
+         	<button class="search-group__btn" type="button"><img src="img/Union.svg" height="33" width="34" alt="search"/></button>
+				<input type="text" id="searchMovies" name="search" placeholder="Поиск фильмов по жанрам и актерам" value="">
+				<button hidden id="btn-remove" class="search-group__btn btn-remove" type="button">
+				</button>
+ 			</div>
+ 			<div class="search-items-box">
+ 				<!-- <div class="search-item">Гоп-стоп</div>
+ 				<div class="search-item">Весенний дрозд</div> -->
+ 			</div>
+		</div>
+		</form>
+		<div class="no-results" hidden>
+		</div>
+		<div class="results-wrapper">
+			<h2 hidden class="results-title"></h2>
+			<div hidden class="results">
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+			<span>© <current-year>2019</current-year> Тинькофф Прокат</span>
+	</footer>
+	<script src="./js/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap&amp;subset=cyrillic,cyrillic-ext');
+html,
+body {
+  height: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-logo {
+  padding: 0;
+  margin: 80px 0 54px;
+  text-align: center;
+}
+
+.footer {
+  margin: 0;
+  padding: 0 0 16px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.search {
+  padding: 0;
+  margin: 0 80px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.search .search-group {
+  display: flex;
+  width: 50%;
+  border-bottom: 2px solid #fff;
+  border-radius: 2px;
+  margin: 0 auto 24px;
+  padding: 13px 63px;
+  box-sizing: border-box;
+}
+.search .search-group .search-group__btn {
+  background: none;
+  outline: none;
+  border: none;
+  min-width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.search .search-group input[type='text'] {
+  width: 446px;
+  margin-left: 8px;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  outline: none;
+}
+.search .search-group input[type='text']:focus {
+  color: #fff;
+}
+.search .search-group .btn-remove {
+  position: absolute;
+  right: 80px;
+  cursor: pointer;
+}
+.search .search-group .btn-remove svg > path:hover {
+  stroke-opacity: 1;
+}
+.search .search-items-box {
+  display: none;
+}
+
+.search_active .search-group {
+  width: 100%;
+  border-bottom: 2px solid #fdce25;
+  padding: 13px 0;
+}
+.search_active .search-group input[type='text'] {
+  margin-left: 12px;
+}
+.search_active .search-items-box {
+  flex-wrap: wrap;
+  display: flex;
+}
+.search_active .search-items-box .search-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 6px 16px;
+  margin: 0 8px 8px 0;
+}
+.search_active .search-items-box .search-item:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+.search_active .search-items-box .item-2 {
+  display: none;
+}
+
+.search_active_more_history .search-items-box .item-2 {
+  display: block;
+}
+
+.search_not_found .search-group .btn-remove {
+  display: block;
+}
+.search_not_found .no-results {
+  display: block;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 48px;
+  padding: 0;
+  margin: 92px 0;
+}
+
+.search_live .search-group .btn-remove {
+  display: block;
+}
+.search_live .results-wrapper {
+  margin: 92px 0 80px 0;
+}
+.search_live .results-wrapper .results-title {
+  display: block;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 48px;
+  padding: 0;
+  margin-bottom: 36px;
+}
+.search_live .results-wrapper .results {
+  display: block;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+}
+.search_live .results-wrapper .results .results-card {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 302px;
+  height: 454px;
+  background: rgba(255, 255, 255, 0.24);
+}
+.search_live .results-wrapper .results .results-card:hover .loading__text {
+  display: block;
+}
+.search_live .results-wrapper .results .results-card:hover .loading__text span {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card:hover
+  .loading__text
+  a
+  > .text-all {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card:hover
+  .loading__text
+  .loading__text-info,
+.search_live
+  .results-wrapper
+  .results
+  .results-card:hover
+  .loading__text
+  .text-info
+  > span {
+  color: rgba(255, 255, 255, 0.4);
+}
+.search_live .results-wrapper .results .results-card .results-card__loading {
+  position: absolute;
+  bottom: 68px;
+  left: 20px;
+  right: 36px;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card
+  .results-card__loading
+  .results-card__load {
+  background: rgba(255, 255, 255, 0.08);
+  height: 24px;
+  border-radius: 2px;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card
+  .results-card__loading
+  .load1 {
+  margin-bottom: 8px;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card
+  .results-card__loading
+  .load2 {
+  max-width: 156px;
+}
+.search_live .results-wrapper .results .results-card .loading__text {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.search_live .results-wrapper .results .results-card .loading__text a > h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.24);
+  margin-bottom: 12px;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card
+  .loading__text
+  .loading__text-info {
+  display: flex;
+  justify-content: space-between;
+}
+.search_live
+  .results-wrapper
+  .results
+  .results-card
+  .loading__text
+  .loading__text-info
+  span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.24);
+}
+.search_live .results-wrapper .results .results-card img {
+  width: 100%;
+  height: 100%;
+}
+.search_live .results-wrapper .results .card-gradient:hover:before {
+  background: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 26.43%,
+    rgba(0, 0, 0, 0.8) 72.41%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scroll .search-items-box {
+  display: none;
+}
+.scroll .search-group {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  padding: 13px 80px;
+  margin: 0;
+  z-index: 100;
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
