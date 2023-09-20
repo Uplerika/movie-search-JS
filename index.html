@@ -11,20 +11,16 @@
 		<img src="img/logo—tp.svg" width="148" height="28" alt="logo"/>
 	</header>
 	<main class="search search_active search_active_more_history search_live">
-		<form class="search-form">
-		<div class="search-box">
+		<form class="search-form"  method="GET" id="search">
          <div class="search-group">
          	<button class="search-group__btn" type="button"><img src="img/Union.svg" height="33" width="34" alt="search"/></button>
-				<input type="text" id="searchMovies" name="search" placeholder="Поиск фильмов по жанрам и актерам" value="">
+				<input class="input" type="text" id="searchMovies" name="search" placeholder="Поиск фильмов по жанрам и актерам" value="" autocomplete="off">
 				<button hidden id="btn-remove" class="search-group__btn btn-remove" type="button">
 				</button>
  			</div>
- 			<div class="search-items-box">
- 				<!-- <div class="search-item">Гоп-стоп</div>
- 				<div class="search-item">Весенний дрозд</div> -->
- 			</div>
-		</div>
 		</form>
+		<div class="tags-result">
+		</div>
 		<div class="no-results" hidden>
 		</div>
 		<div class="results-wrapper">

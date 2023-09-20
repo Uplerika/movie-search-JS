@@ -83,19 +83,24 @@ body {
   padding: 0;
   cursor: pointer;
 }
-.search .search-group input[type='text'] {
-  width: 446px;
+.search .search-group .input {
   margin-left: 8px;
   border: none;
-  background: none;
   color: rgba(255, 255, 255, 0.4);
   font-weight: 300;
   font-size: 24px;
-  line-height: 36px;
   outline: none;
+  width: 100%;
+  min-width: 250px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
 }
-.search .search-group input[type='text']:focus {
+.search .search-group .input:focus {
   color: #fff;
+}
+.search .search-group .input::-webkit-search-cancel-button {
+  display: none;
 }
 .search .search-group .btn-remove {
   position: absolute;
@@ -105,7 +110,7 @@ body {
 .search .search-group .btn-remove svg > path:hover {
   stroke-opacity: 1;
 }
-.search .search-items-box {
+.search .tags-result {
   display: none;
 }
 
@@ -117,11 +122,11 @@ body {
 .search_active .search-group input[type='text'] {
   margin-left: 12px;
 }
-.search_active .search-items-box {
+.search_active .tags-result {
   flex-wrap: wrap;
   display: flex;
 }
-.search_active .search-items-box .search-item {
+.search_active .tags-result .search-tag {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   color: rgba(0, 0, 0, 0.8);
@@ -131,15 +136,15 @@ body {
   padding: 6px 16px;
   margin: 0 8px 8px 0;
 }
-.search_active .search-items-box .search-item:hover {
+.search_active .tags-result .search-tag:hover {
   cursor: pointer;
   background-color: #fff;
 }
-.search_active .search-items-box .item-2 {
+.search_active .tags-result .item-2 {
   display: none;
 }
 
-.search_active_more_history .search-items-box .item-2 {
+.search_active_more_history .tags-result .item-2 {
   display: block;
 }
 
@@ -305,8 +310,40 @@ body {
   top: 0;
   left: 0;
 }
-
-.scroll .search-items-box {
+.search_live .results-wrapper .loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: auto;
+}
+.search_live .results-wrapper .loader::after {
+    content: '';  
+  box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-bottom-color: #fdce25;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+.scroll .tags-result {
   display: none;
 }
 .scroll .search-group {

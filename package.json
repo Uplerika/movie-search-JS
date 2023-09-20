@@ -15,18 +15,20 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,html}": [
-      "prettier --write --config .prettierrc.js",
+    "*.{js, cjs, json, css, html}": [
+      "prettier --write --ignore-unknown",
       "git add"
     ]
   },
   "devDependencies": {
+    "gulp-sass": "^5.1.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "live-server": "^1.2.1",
     "prettier": "^1.16.4"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
     "normalize.css": "^8.0.1",
     "serve": "^13.0.2"
   }
