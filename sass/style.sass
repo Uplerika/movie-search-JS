@@ -4,13 +4,13 @@ $main-color: #1C1C1C
 $var1: #fff
 $mainfont: 'Roboto', sans-serif
 
-html, body 
+html, body
   height: 100%
-a 
+a
   color: $var1
   text-decoration: none
 
-  &:hover 
+  &:hover
     color: $var1
     text-decoration: none
     transition: 0.5s
@@ -19,11 +19,11 @@ h1, h2, h3, h4, h5, h6
   margin: 0
   font-size: 100%
 
-img 
+img
   max-width: 100%
   height: auto
 
-body 
+body
   font-family: $mainfont
   max-width: 100%
   margin: 0
@@ -47,13 +47,13 @@ body
   line-height: 14px
   font-weight: 400
   color: rgba(255, 255, 255, 0.4)
-  
+
 //search
 .search
   padding: 0
   margin: 0 80px
   flex-grow: 1
-  box-sizing: border-box 
+  box-sizing: border-box
 
   .search-group
     display: flex
@@ -74,16 +74,28 @@ body
       padding: 0
       cursor: pointer
 
-    input[type=text]
+    .input
       width: 446px
       margin-left: 8px
       border: none
-      background: none
+      //background: none
       color: rgba(255, 255, 255, 0.4)
       font-weight: 300
       font-size: 24px
       line-height: 36px
       outline: none
+
+      width: 100%
+      min-width: 250px
+      //border: 1px solid #ffffff
+      //border-radius: 6px
+      //margin-top: 25px
+      padding: 10px 15px
+      background-color: transparent
+      font-family: inherit
+      font-size: inherit
+      -webkit-appearance: none
+      appearance: none
 
       &:focus
         color: $var1
@@ -93,8 +105,8 @@ body
       right: 80px
       cursor: pointer
       svg > path:hover
-        stroke-opacity: 1
-  
+      stroke-opacity: 1
+
   .search-items-box
     display: none
 
@@ -175,7 +187,7 @@ body
         background: rgba(255, 255, 255, 0.24)
         &:hover
           .loading__text
-            display: block 
+            display: block
             span
               font-size: 24px
               line-height: 36px
@@ -195,20 +207,20 @@ body
             height: 24px
             border-radius: 2px
           .load1
-              margin-bottom: 8px
-          .load2 
-               max-width: 156px
+            margin-bottom: 8px
+          .load2
+            max-width: 156px
         .loading__text
           position: absolute
           left: 20px
           right: 20px
           bottom: 20px
           a > h3
-            font-weight: bold
-            font-size: 24px
-            line-height: 36px
-            color: rgba(255, 255, 255, 0.24)
-            margin-bottom: 12px
+          font-weight: bold
+          font-size: 24px
+          line-height: 36px
+          color: rgba(255, 255, 255, 0.24)
+          margin-bottom: 12px
           .loading__text-info
             display: flex
             justify-content: space-between
@@ -245,25 +257,8 @@ body
     width: 100%
     border-bottom: 2px solid $var1
     padding: 13px 80px
-    margin: 0 
+    margin: 0
     z-index: 100
     background: rgba(28, 28, 28, 0.8)
     backdrop-filter: blur(4px)
     -webkit-backdrop-filter: blur(4px)
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
