@@ -6,7 +6,7 @@
 
 ## Страница поиска
 
-![Screenshot](https://github.com/Uplerika/movie-search-JS/blob/main/img/appscreen.png?raw=true)
+![Screenshot](https://github.com/Uplerika/movie-search-JS/blob/main/img/Moviesapp.jpg?raw=true)
 
 ## Функционал
 
