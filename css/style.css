@@ -62,6 +62,7 @@ body {
   padding: 0;
   margin: 0 clamp(5px, 10%, 80px);
   box-sizing: border-box;
+  flex-grow: 1;
 }
 .search .search-group {
   display: flex;
